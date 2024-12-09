@@ -1,0 +1,36 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+config/local.php
+.env
+
+# Logs
+*.log
+
+# Arquivos temporários
+tmp/
+temp/
+
+# Dependências
+vendor/
+node_modules/
+
+# Arquivos de backup
+*.bak
+*.backup
+*.sql
+*.gz
+*.zip
+
+# Certificados SSL
+*.pem
+*.key
+*.crt
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

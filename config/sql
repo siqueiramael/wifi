@@ -1,0 +1,23 @@
+sql {
+        driver = "rlm_sql_mysql"
+        dialect = "mysql"
+        
+        server = "localhost"
+        port = 3306
+        login = "radius"
+        password = "your_password_here"
+        radius_db = "radius"
+        
+        read_clients = yes
+        client_table = "nas"
+        
+        authorize_check_query = "SELECT id, username, attribute, value, op \
+                FROM radcheck \
+                WHERE username = '%{SQL-User-Name}' \
+                ORDER BY id"
+                
+        group_membership_query = "SELECT groupname \
+                FROM radusergroup \
+                WHERE username = '%{SQL-User-Name}' \
+                ORDER BY priority"
+}
